@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nifty Future</title>
+    <style>
+        /* Tab style */
+        .tab {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px 5px 0 0;
+            display: inline-block;
+        }
+
+        .tab.active {
+            background-color: #ddd;
+        }
+
+        /* Content style */
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nifty Future</h1>
+
+    <div>
+        <!-- Tab buttons -->
+        <div class="tab" onclick="showTab('tab1')">Live Nifty Future</div>
+<!--        <div class="tab" onclick="showTab('tab2')">Tab 2</div>-->
+<!--        <div class="tab" onclick="showTab('tab3')">Tab 3</div>-->
+
+        <!-- Tab contents -->
+        <div id="tab1Content" class="tab-content">
+            <h2>Tab 1 Content</h2>
+            <p>This is the content of Tab 1.</p>
+        </div>
+        <div id="tab2Content" class="tab-content">
+            <h2>Tab 2 Content</h2>
+            <p>This is the content of Tab 2.</p>
+        </div>
+        <div id="tab3Content" class="tab-content">
+            <h2>Tab 3 Content</h2>
+            <p>This is the content of Tab 3.</p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            var tabContents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+
+            // Deactivate all tabs
+            var tabs = document.getElementsByClassName('tab');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+
+            // Show the selected tab content and activate the corresponding tab button
+            document.getElementById(tabName + 'Content').classList.add('active');
+            document.querySelector('[onclick="showTab(\'' + tabName + '\')"]').classList.add('active');
+        }
+    </script>
+</body>
+</html>
