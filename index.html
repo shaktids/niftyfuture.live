@@ -36,15 +36,16 @@
         <!-- Tab buttons -->
         <div class="tab" onclick="showTab('tab1')">Live Nifty Future</div>
         <div class="tab" onclick="showTab('tab2')">Global Market</div>
-        <div class="tab" onclick="showTab('tab3')">HeatMap</div>
+<!--        <div class="tab" onclick="showTab('tab3')">HeatMap</div>-->
+        <div class="tab" onclick="showTab('tab4')">Economic Calendar</div>
+        <div class="tab" onclick="showTab('tab5')">Top </div>
+
 
         <!-- Tab contents -->
         <div id="tab1Content" class="tab-content">
            <iframe height="700" width="1100" src="https://ssltvc.investing.com/?pair_ID=8985&height=1100&width=1900&interval=86400&plotStyle=area&domain_ID=56&lang_ID=56&timezone_ID=20"></iframe>
         </div>
         <div id="tab2Content" class="tab-content">
-            <h2>Tab 2 Content</h2>
-            <p>This is the content of Tab 2.</p>
             <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
@@ -178,40 +179,88 @@
   </script>
 </div>
         </div>
-        <div id="tab3Content" class="tab-content">
-            <h2>Tab 3 Content</h2>
-            <p>This is the content of Tab 3.</p>
+
+<!--        <div id="tab3Content" class="tab-content">-->
+<!--            <div class="tradingview-widget-container">-->
+<!--  <div class="tradingview-widget-container__widget"></div>-->
+<!--  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>-->
+<!--  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>-->
+<!--  {-->
+<!--  "exchanges": [-->
+<!--    "BSE"-->
+<!--  ],-->
+<!--  "dataSource": "SENSEX",-->
+<!--  "grouping": "sector",-->
+<!--  "blockSize": "market_cap_basic",-->
+<!--  "blockColor": "change",-->
+<!--  "locale": "en",-->
+<!--  "symbolUrl": "",-->
+<!--  "colorTheme": "dark",-->
+<!--  "hasTopBar": false,-->
+<!--  "isDataSetEnabled": false,-->
+<!--  "isZoomEnabled": true,-->
+<!--  "hasSymbolTooltip": true,-->
+<!--  "width": "100%",-->
+<!--  "height": "100%"-->
+<!--}-->
+<!--  </script>-->
+<!--</div>-->
+<!--        </div>-->
+        <div id="tab4Content" class="tab-content">
+              <div>
             <!-- TradingView Widget BEGIN -->
-           <!-- TradingView Widget BEGIN -->
-            <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>
-  {
-  "exchanges": [
-    "BSE"
-  ],
-  "dataSource": "SENSEX",
-  "grouping": "sector",
-  "blockSize": "market_cap_basic",
-  "blockColor": "change",
-  "locale": "en",
-  "symbolUrl": "",
-  "colorTheme": "dark",
-  "hasTopBar": false,
-  "isDataSetEnabled": false,
-  "isZoomEnabled": true,
-  "hasSymbolTooltip": true,
-  "width": "100%",
-  "height": "100%"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-<!-- TradingView Widget END -->
+                <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>
+                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+                  {
+                  "colorTheme": "dark",
+                  "isTransparent": false,
+                  "width": "510",
+                  "height": "1600",
+                  "locale": "en",
+                  "importanceFilter": "0,1",
+                  "currencyFilter": "AUD,USD,CAD,EUR,FRF,DEM,INR,ITL,JPY,MXN,NZD,ZAR,ESP,CHF,TRL,GBP"
+                }
+                  </script>
+                </div>
 <!-- TradingView Widget END -->
         </div>
+        </div>
+        <div id="tab5Content" class="tab-content">
+                                 <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                      <div class="tradingview-widget-container__widget"></div>
+                      <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+                      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
+                      {
+                      "colorTheme": "dark",
+                      "dateRange": "12M",
+                      "exchange": "BSE",
+                      "showChart": true,
+                      "locale": "in",
+                      "largeChartUrl": "",
+                      "isTransparent": false,
+                      "showSymbolLogo": false,
+                      "showFloatingTooltip": false,
+                      "width": "400",
+                      "height": "600",
+                      "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+                      "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+                      "gridLineColor": "rgba(42, 46, 57, 0)",
+                      "scaleFontColor": "rgba(134, 137, 147, 1)",
+                      "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+                      "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+                      "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+                      "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+                      "symbolActiveColor": "rgba(41, 98, 255, 0.12)"
+                    }
+                      </script>
+                    </div>
+<!-- TradingView Widget END -->
+        </div>
+
+    </div>
     </div>
     <!-- TradingView Widget BEGIN -->
 
