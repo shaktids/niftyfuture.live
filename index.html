@@ -1,55 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
     <title>Nifty Future</title>
-    <style>
-        /* Tab style */
-        .tab {
-            cursor: pointer;
-            padding: 10px 20px;
-            background-color: #f1f1f1;
-            border: 1px solid #ccc;
-            border-radius: 5px 5px 0 0;
-            display: inline-block;
-        }
 
-        .tab.active {
-            background-color: #ddd;
-        }
-
-        /* Content style */
-        .tab-content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ccc;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-    </style>
 </head>
 <body>
-    <h1>Nifty Future</h1>
-
-    <div>
-        <!-- Tab buttons -->
-<!--        <div class="tab" onclick="showTab('tab1')">Live Nifty Future</div>-->
-        <div class="tab" onclick="showTab('tab2')">Global Market</div>
-<!--        <div class="tab" onclick="showTab('tab3')">HeatMap</div>-->
-        <div class="tab" onclick="showTab('tab4')">Economic Calendar</div>
-        <div class="tab" onclick="showTab('tab5')">Top </div>
+<header class="header">
+    <h2><a href="https://niftyfuture.live/" class="header-link">Nifty Future</a></h2>
+</header>
 
 
-        <!-- Tab contents -->
-<!--        <div id="tab1Content" class="tab-content">-->
-<!--           <iframe height="700" width="1100" src="https://ssltvc.investing.com/?pair_ID=8985&height=1100&width=1900&interval=86400&plotStyle=area&domain_ID=56&lang_ID=56&timezone_ID=20"></iframe>-->
-<!--        </div>-->
-        <div id="tab2Content" class="tab-content">
-            <div class="tradingview-widget-container">
-                  <div class="tradingview-widget-container__widget"></div>
-                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+ <div class="tab-container">
+
+    <div class="tab" onclick="showTab('tab2')">Global Market</div>
+    <!--        <div class="tab" onclick="showTab('tab3')">HeatMap</div>-->
+    <div class="tab" onclick="showTab('tab4')">Economic Calendar</div>
+    <div class="tab" onclick="showTab('tab5')">Nifty Top</div>
+
+
+
+    <div id="tab2Content" class="tab-content">
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
+                                                         target="_blank"><span class="blue-text">Track all markets on TradingView</span></a>
+            </div>
+            <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
                   {
                   "width": 770,
                   "height": 750,
@@ -176,43 +155,23 @@
                   "isTransparent": false,
                   "locale": "en"
                 }
-                  </script>
-                </div>
-        </div>
 
-<!--        <div id="tab3Content" class="tab-content">-->
-<!--            <div class="tradingview-widget-container">-->
-<!--  <div class="tradingview-widget-container__widget"></div>-->
-<!--  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>-->
-<!--  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>-->
-<!--  {-->
-<!--  "exchanges": [-->
-<!--    "BSE"-->
-<!--  ],-->
-<!--  "dataSource": "SENSEX",-->
-<!--  "grouping": "sector",-->
-<!--  "blockSize": "market_cap_basic",-->
-<!--  "blockColor": "change",-->
-<!--  "locale": "en",-->
-<!--  "symbolUrl": "",-->
-<!--  "colorTheme": "dark",-->
-<!--  "hasTopBar": false,-->
-<!--  "isDataSetEnabled": false,-->
-<!--  "isZoomEnabled": true,-->
-<!--  "hasSymbolTooltip": true,-->
-<!--  "width": "100%",-->
-<!--  "height": "100%"-->
-<!--}-->
-<!--  </script>-->
-<!--</div>-->
-<!--        </div>-->
-        <div id="tab4Content" class="tab-content">
-              <div>
-            <!-- TradingView Widget BEGIN -->
+            </script>
+        </div>
+    </div>
+
+
+
+    <div id="tab4Content" onload="mainTab('tab4')" class="tab-content">
+            <div>
+                <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
-                  <div class="tradingview-widget-container__widget"></div>
-                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/"
+                                                                 rel="noopener nofollow" target="_blank"><span
+                            class="blue-text">Track all markets on TradingView</span></a></div>
+                    <script type="text/javascript"
+                            src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
                   {
                   "colorTheme": "dark",
                   "isTransparent": false,
@@ -222,17 +181,21 @@
                   "importanceFilter": "0,1",
                   "currencyFilter": "AUD,USD,CAD,EUR,FRF,DEM,INR,ITL,JPY,MXN,NZD,ZAR,ESP,CHF,TRL,GBP"
                 }
-                  </script>
+
+                    </script>
                 </div>
-<!-- TradingView Widget END -->
+                <!-- TradingView Widget END -->
+            </div>
         </div>
-        </div>
-        <div id="tab5Content" class="tab-content">
-                                 <!-- TradingView Widget BEGIN -->
-                    <div class="tradingview-widget-container">
-                      <div class="tradingview-widget-container__widget"></div>
-                      <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-                      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
+    <div id="tab5Content" class="tab-content">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/" rel="noopener nofollow"
+                                                             target="_blank"><span class="blue-text">Track all markets on TradingView</span></a>
+                </div>
+                <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
                       {
                       "colorTheme": "dark",
                       "dateRange": "12M",
@@ -255,17 +218,20 @@
                       "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
                       "symbolActiveColor": "rgba(41, 98, 255, 0.12)"
                     }
-                      </script>
-                    </div>
-<!-- TradingView Widget END -->
+
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
         </div>
 
-    </div>
+
 
     <!-- TradingView Widget BEGIN -->
 
-<!-- TradingView Widget END -->
+    <!-- TradingView Widget END -->
     <script>
+
+
         function showTab(tabName) {
             // Hide all tab contents
             var tabContents = document.getElementsByClassName('tab-content');
@@ -283,6 +249,8 @@
             document.getElementById(tabName + 'Content').classList.add('active');
             document.querySelector('[onclick="showTab(\'' + tabName + '\')"]').classList.add('active');
         }
+
     </script>
+</div>
 </body>
 </html>
